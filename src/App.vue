@@ -1,15 +1,20 @@
 <template>
   <div id="app">
 
+    
     <Loader 
     v-if= "loading === true"
     />
+
 
     <div
     v-else
     >
 
       <HeaderComp />
+      <Search 
+        
+      />
 
       <div class="container">
         <div class="row">
@@ -32,6 +37,7 @@ import axios from 'axios'
 import Disco from '@/components/Disco.vue'
 import HeaderComp from '@/components/HeaderComp.vue'
 import Loader from '@/components/Loader.vue'
+import Search from '@/components/Search.vue'
 
 
 export default {
@@ -40,6 +46,7 @@ export default {
     Disco,
     HeaderComp,
     Loader,
+    Search,
   },
   data(){
     return{
